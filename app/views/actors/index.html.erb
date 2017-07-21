@@ -1,5 +1,6 @@
 <h1>Actors List</h1>
 
+<%= link_to "Crear Actor", new_actor_path %>
 
 <ul>
 <% @actors.each do |actor| %>
@@ -8,9 +9,9 @@
   <h3><%= actor.name %></h3>
   <h4>Biography: </h4>
   <p><%= actor.bio %></p>
-  <p>Birth place: <%= "#{actor.birth_date} #{actor.birth_place}" %> </p>
+  <p><strong>Birth place:</strong> <%= "#{actor.birth_date} #{actor.birth_place}" %> </p>
   <% unless actor.alive %>
-    <p>Death date: <%= "#{actor.death_date} #{actor.death_place}" %></p>
+    <p><strong>Death date:</strong> <%= "#{actor.death_date} #{actor.death_place}" %></p>
   <% end %>
   <hr>
   </li>  

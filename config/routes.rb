@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'actors/', to: 'actors#index'
+  post 'actors/', to: 'actors#create'
+  get 'actors/new', to: 'actors#new', as: :new_actor 
 
   root 'actors#index'
   # The priority is based upon order of creation: first created -> highest priority.
